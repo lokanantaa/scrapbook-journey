@@ -1,0 +1,822 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f7f0e5;
+    color: #403b45;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: rgba(247, 240, 229, 0.94);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #ded2c1;
+}
+
+.logo {
+    font-family: "Caveat", cursive;
+    font-size: 28px;
+    font-weight: 700;
+    color: #6e5a78;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #514a54;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #8b7097;
+}
+
+
+/* =========================
+   COVER
+========================= */
+
+.cover {
+    min-height: 92vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 8%;
+
+    background:
+        radial-gradient(circle at 15% 20%, #eadff0 0 5%, transparent 6%),
+        radial-gradient(circle at 90% 70%, #dce6dc 0 7%, transparent 8%),
+        #f7f0e5;
+}
+
+.cover-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.small-note {
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    color: #8c7893;
+}
+
+.cover h1 {
+    font-family: "Caveat", cursive;
+    font-size: clamp(75px, 12vw, 150px);
+    line-height: 0.85;
+    color: #6e5a78;
+}
+
+.subtitle {
+    max-width: 480px;
+    margin: 25px 0;
+    font-size: 17px;
+}
+
+.cover-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cover-tags span {
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #dfe7dc;
+    font-size: 12px;
+}
+
+.open-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 12px 20px;
+
+    background: #6e5a78;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    transform: rotate(-2deg);
+}
+
+.cover-photo {
+    transform: rotate(4deg);
+}
+
+.polaroid {
+    width: 300px;
+    padding: 14px 14px 28px;
+
+    background: white;
+
+    box-shadow: 0 12px 25px rgba(60, 50, 60, 0.15);
+}
+
+.polaroid img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+.polaroid p {
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+    margin-top: 8px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 100px 7%;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.section-title span {
+    font-family: "Caveat", cursive;
+    font-size: 24px;
+    color: #9a829f;
+}
+
+.section-title h2 {
+    font-family: "Caveat", cursive;
+    font-size: 50px;
+    color: #62506c;
+}
+
+.section-intro {
+    margin-bottom: 50px;
+    max-width: 600px;
+    color: #756d76;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #eee8dc;
+    max-width: none;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 70px;
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.handwriting {
+    font-family: "Caveat", cursive;
+    font-size: 34px;
+    color: #765d80;
+}
+
+.mini-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.info-card {
+    background: #f9f5ed;
+    padding: 25px;
+    border: 1px dashed #c7b9a8;
+    transform: rotate(-1deg);
+}
+
+.info-card:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.info-card span {
+    font-size: 25px;
+}
+
+.info-card strong {
+    display: block;
+    margin-top: 10px;
+}
+
+.info-card p {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* =========================
+   DAILY LIFE
+========================= */
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.memory-card {
+    background: #fffdf8;
+    padding: 15px 15px 25px;
+
+    box-shadow: 0 10px 20px rgba(70, 60, 50, 0.1);
+}
+
+.rotate-left {
+    transform: rotate(-2deg);
+}
+
+.rotate-right {
+    transform: rotate(2deg);
+}
+
+.photo-frame {
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.memory-card h3 {
+    font-family: "Caveat", cursive;
+    font-size: 29px;
+    color: #6d5876;
+    margin-bottom: 8px;
+}
+
+.memory-card p {
+    font-size: 13px;
+}
+
+.date-note {
+    display: block;
+    margin-top: 15px;
+
+    font-family: "Caveat", cursive;
+    font-size: 19px;
+    color: #84947f;
+}
+
+
+/* =========================
+   ORGANIZATION
+========================= */
+
+.organization {
+    max-width: 1250px;
+}
+
+.journey-card {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+
+    padding: 60px 0;
+
+    border-bottom: 1px dashed #cfc1b0;
+}
+
+.journey-card.reverse {
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+.journey-card.reverse .journey-photo {
+    order: 2;
+}
+
+.journey-card.reverse .journey-content {
+    order: 1;
+}
+
+.journey-photo {
+    position: relative;
+}
+
+.journey-photo::before {
+    content: "";
+    position: absolute;
+
+    width: 70px;
+    height: 25px;
+
+    top: -12px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-4deg);
+
+    background: rgba(210, 195, 163, 0.6);
+}
+
+.journey-photo img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+    padding: 10px;
+
+    background: white;
+
+    box-shadow: 0 12px 25px rgba(60, 50, 60, 0.12);
+
+    transform: rotate(-2deg);
+}
+
+.journey-card.reverse .journey-photo img {
+    transform: rotate(2deg);
+}
+
+.chapter-number {
+    font-family: "Caveat", cursive;
+    font-size: 24px;
+    color: #9a829f;
+}
+
+.journey-content h3 {
+    font-family: "Caveat", cursive;
+    font-size: 42px;
+    color: #67536f;
+    margin: 5px 0;
+}
+
+.role {
+    color: #87957e;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.journey-content p {
+    margin-bottom: 17px;
+    font-size: 14px;
+}
+
+.learn-box {
+    margin-top: 25px;
+    padding: 17px;
+
+    background: #e4ebdf;
+
+    border-left: 5px solid #9aaa92;
+}
+
+.learn-box strong {
+    display: block;
+    font-family: "Caveat", cursive;
+    font-size: 21px;
+}
+
+.learn-box span {
+    font-size: 12px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-section {
+    background: #eee8dc;
+    max-width: none;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.timeline {
+    max-width: 900px;
+    margin: 50px auto 0;
+
+    border-left: 2px dashed #b5a6b8;
+    padding-left: 35px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+    left: -46px;
+    top: 6px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #8d7695;
+    border: 4px solid #eee8dc;
+}
+
+.timeline-item span {
+    font-family: "Caveat", cursive;
+    color: #87957e;
+    font-size: 22px;
+}
+
+.timeline-item h3 {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    color: #67536f;
+}
+
+.timeline-item p {
+    max-width: 650px;
+}
+
+
+/* =========================
+   DIGITAL CORNER
+========================= */
+
+.digital-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.code-paper {
+    background: #29262d;
+    color: #ddd5df;
+
+    padding: 25px;
+
+    transform: rotate(-2deg);
+
+    box-shadow: 0 15px 25px rgba(40, 30, 40, 0.15);
+}
+
+.window-dots {
+    color: #aaa;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.code-paper pre {
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    overflow-x: auto;
+}
+
+.digital-text p {
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   LAST PAGE
+========================= */
+
+.last-page {
+    padding: 100px 7%;
+
+    display: flex;
+    justify-content: center;
+
+    background: #dfe6da;
+}
+
+.last-paper {
+    position: relative;
+
+    max-width: 650px;
+
+    padding: 60px;
+
+    background: #fffdf7;
+
+    box-shadow: 0 15px 30px rgba(50, 50, 40, 0.12);
+
+    transform: rotate(1deg);
+}
+
+.paperclip {
+    position: absolute;
+    top: -20px;
+    right: 35px;
+    font-size: 35px;
+}
+
+.last-paper p {
+    margin: 20px 0;
+}
+
+.last-paper h2 {
+    font-family: "Caveat", cursive;
+    font-size: 35px;
+    color: #6e5a78;
+    margin-top: 30px;
+}
+
+.signature {
+    margin-top: 30px;
+    font-family: "Caveat", cursive;
+    font-size: 28px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px;
+    text-align: center;
+
+    background: #6e5a78;
+    color: #eee7ef;
+
+    font-size: 12px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .cover-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cover-tags {
+        justify-content: center;
+    }
+
+    .about-grid,
+    .digital-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .journey-card,
+    .journey-card.reverse {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .journey-card.reverse .journey-photo,
+    .journey-card.reverse .journey-content {
+        order: initial;
+    }
+
+    .journey-photo img {
+        height: 350px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .section-title h2 {
+        font-size: 40px;
+    }
+
+    .cover {
+        padding: 60px 6%;
+    }
+
+    .cover h1 {
+        font-size: 80px;
+    }
+
+    .polaroid {
+        width: 260px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mini-info {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-content h3 {
+        font-size: 36px;
+    }
+
+    .last-paper {
+        padding: 35px;
+    }
+
+}
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    padding: 90px 7%;
+    display: flex;
+    justify-content: center;
+    background: #f7f0e5;
+}
+
+.contact-paper {
+    position: relative;
+
+    width: 100%;
+    max-width: 720px;
+
+    padding: 55px;
+
+    background: #fffdf7;
+
+    border: 1px dashed #cbbdaa;
+
+    box-shadow: 0 12px 25px rgba(60, 50, 60, 0.1);
+
+    transform: rotate(-1deg);
+}
+
+.contact-paper h2 {
+    font-family: "Caveat", cursive;
+    font-size: 48px;
+    color: #6e5a78;
+
+    margin: 5px 0 10px;
+}
+
+.contact-intro {
+    max-width: 500px;
+    margin-bottom: 30px;
+    color: #706a70;
+}
+
+.contact-list {
+    display: grid;
+    gap: 14px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 15px 18px;
+
+    text-decoration: none;
+    color: #403b45;
+
+    background: #eee8dc;
+
+    border: 1px solid #ded3c4;
+
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateX(7px) rotate(1deg);
+    background: #e4ebdf;
+}
+
+.contact-icon {
+    font-size: 25px;
+}
+
+.contact-item strong {
+    display: block;
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+    color: #6e5a78;
+}
+
+.contact-item p {
+    font-size: 13px;
+    margin: 0;
+    word-break: break-word;
+}
+
+.contact-sign {
+    margin-top: 30px;
+
+    text-align: right;
+
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+
+    color: #87947f;
+}
+
+@media (max-width: 600px) {
+
+    .contact-paper {
+        padding: 35px 25px;
+    }
+
+    .contact-paper h2 {
+        font-size: 40px;
+    }
+
+}
+/* =========================
+   ORGANIZATION CARD FIX
+========================= */
+
+.journey-card {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.journey-card.reverse {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+
+.journey-content {
+    min-width: 0;
+}
+
+.journey-photo {
+    min-width: 0;
+}
+
+.journey-photo img {
+    display: block;
+    width: 100%;
+}
